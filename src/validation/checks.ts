@@ -146,10 +146,10 @@ function checkAssetId (assetId): ValidationResponse {
 }
 
 function checkDescription (description): ValidationResponse {
-  if (description.length > 64) {
+  if (description.length > 2048) {
     return {
       isValid: false,
-      reason: 'Description length should be smaller then 64 symbols'
+      reason: 'Description length should be smaller then 2048 symbols'
     }
   }
 
